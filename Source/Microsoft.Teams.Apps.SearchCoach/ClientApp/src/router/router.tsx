@@ -22,7 +22,6 @@ export const AppRoute: React.FunctionComponent<{}> = () => {
                 <Switch>
                     <Route exact path="/error" component={ErrorPage} />
                     <Route exact path="/search-landing-page" component={SearchCoachLandingPage} />
-                    <Route exact path="/search-coach-results" component={SearchCoachResultsPage} />
                     <Route exact path="/signin" component={SignInPage} />
                     <Route exact path="/signin-simple-start" component={SignInSimpleStart} />
                     <Route exact path="/signin-simple-end" component={SignInSimpleEnd} />
