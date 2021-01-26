@@ -1,4 +1,4 @@
-﻿// <copyright file="UsersService.cs" company="Microsoft">
+// <copyright file="UsersService.cs" company="Microsoft">
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
@@ -77,7 +77,7 @@ namespace Microsoft.Teams.Apps.SearchCoach.Services.MicrosoftGraph.Users
                     requestMessage =>
                     {
                         requestMessage.Headers.Authorization = new AuthenticationHeaderValue(
-                            Common.Constants.BearerAuthorizationScheme,
+                            "Bearer",
                             accessToken);
                         return Task.CompletedTask;
                     }));
