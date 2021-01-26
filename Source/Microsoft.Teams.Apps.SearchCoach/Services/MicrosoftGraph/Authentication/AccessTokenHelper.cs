@@ -1,4 +1,4 @@
-﻿// <copyright file="AccessTokenHelper.cs" company="Microsoft">
+// <copyright file="AccessTokenHelper.cs" company="Microsoft">
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
@@ -12,7 +12,6 @@ namespace Microsoft.Teams.Apps.SearchCoach.Services.MicrosoftGraph.Authenticatio
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
     using Microsoft.Identity.Client;
-    using Microsoft.Teams.Apps.SearchCoach.Common;
     using Microsoft.Teams.Apps.SearchCoach.Helpers;
     using Microsoft.Teams.Apps.SearchCoach.Models.Configuration;
 
@@ -107,7 +106,7 @@ namespace Microsoft.Teams.Apps.SearchCoach.Services.MicrosoftGraph.Authenticatio
                     this.logger.LogInformation($"MSAL exception occurred and trying to acquire new token. MSAL exception details are found {ex}.");
                     var jwtToken = AuthenticationHeaderValue.Parse(authorizationHeader).Parameter;
                     var scheme = AuthenticationHeaderValue.Parse(authorizationHeader).Scheme;
-                    if (scheme != Constants.BearerAuthorizationScheme)
+                    if (scheme != "Bearer")
                     {
                         this.logger.LogError($"Authentication scheme : {scheme} is not valid.");
                         return null;
